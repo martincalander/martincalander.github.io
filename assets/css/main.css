@@ -16,13 +16,20 @@ section, summary, time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline; 
-  overflow-x: hidden;
+
 
 }
 
 
 
  /* --- 1: BANNER --- */
+
+/* ##### ANIMATIONS ##### */
+
+@keyframes blurin-intro {
+  from { filter: blur(12.5px); }
+  to   { filter: blur(0px); }
+}
 
  #banner-section {
 
@@ -34,7 +41,10 @@ section, summary, time, mark, audio, video {
 .logo {
 
   max-width: 100%;
-
+  animation: blurin-intro 1s, spacing-intro 1.25s;
+}
+.logo:start {
+  max-width: 10%;
 }
 
 @media screen and (max-width: 1680px) {
@@ -63,7 +73,7 @@ section, summary, time, mark, audio, video {
   width: 100%;
   max-width: 720px;
   position: relative; /* or absolute */
-  box-shadow: -50px 80px 4px 10px #555;
+  box-shadow: -5px 8px 50px 10px #555;
   -webkit-transform: rotate(10deg);
   -moz-transform: rotate(10deg);
   -o-transform: rotate(10deg);
@@ -71,21 +81,38 @@ section, summary, time, mark, audio, video {
   transform: rotate(-2deg);
 }
 
-
 .gameplay div {
 
   text-align: left;
-  width: 35%;
+  width: 40%;
 
 }
 
-.gameplay span {
+span {
 
-  width: 5%;
+  width: 3%;
+  height: 3%;
 
 }
 
  /* --- 99: DASE --- */
+
+/* --- 3: LINKS --- */
+
+
+#links-section {
+
+  width: 100vw;
+  height: 25vh;
+
+}
+
+.icon {
+  transition: transform .2s; 
+}
+.icon:hover {
+  transform: rotate(-5deg) scale(1.2);
+}
 
 .flex-center {
 
@@ -116,9 +143,26 @@ section, summary, time, mark, audio, video {
    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+h2 {
+  text-align: left;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 p {
   text-align: left;
   font-size: 20px;
   font-weight: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html body {
+  overflow: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+::-webkit-scrollbar {
+  width: 0px; 
+  background: transparent;
 }
