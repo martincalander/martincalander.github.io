@@ -56,11 +56,11 @@ section, summary, time, mark, audio, video {
 .gameplay {
 
   width: 100%;
-
+  overflow: visible;
 }
 
 .gameplay img {
-  width: 95%;
+  width: 100%;
   max-width: 720px;
   position: relative; /* or absolute */
   box-shadow: -50px 80px 4px 10px #555;
@@ -68,7 +68,7 @@ section, summary, time, mark, audio, video {
   -moz-transform: rotate(10deg);
   -o-transform: rotate(10deg);
   -ms-transform: rotate(10deg);
-  transform: rotate(-1deg);
+  transform: rotate(-2deg);
 }
 
 
