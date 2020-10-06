@@ -1,8 +1,3 @@
-img {
-  max-width: 100%;
-  
-}
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -14,9 +9,116 @@ tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
+
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline; 
+  overflow-x: hidden;
+
+}
+
+
+
+ /* --- 1: BANNER --- */
+
+ #banner-section {
+
+  width: 100vw;
+  height: 100vh;
+
+}
+
+.logo {
+
+  max-width: 100%;
+
+}
+
+@media screen and (max-width: 1680px) {
+
+  html {
+    font-size: 11pt; } 
+
+}
+
+ /* --- 2: GAMEPLAY --- */
+
+ #gameplay-section {
+
+  width: 100vw;
+  height: 150vh;
+
+}
+
+.gameplay {
+
+  width: 100%;
+
+}
+
+.gameplay img {
+  width: 95%;
+  max-width: 720px;
+  position: relative; /* or absolute */
+  box-shadow: -50px 80px 4px 10px #555;
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(-1deg);
+}
+
+
+.gameplay div {
+
+  text-align: left;
+  width: 35%;
+
+}
+
+.gameplay span {
+
+  width: 5%;
+
+}
+
+ /* --- 99: DASE --- */
+
+.flex-center {
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.flex-updown {
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+ /* --- 99: DASE --- */
+
+ h1 {
+   text-align: left;
+   font-size: 30px;
+   font-weight: bold;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+  text-align: left;
+  font-size: 20px;
+  font-weight: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
