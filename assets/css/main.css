@@ -14,9 +14,8 @@ section, summary, time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   vertical-align: baseline; 
-
 
 }
 
@@ -31,7 +30,7 @@ section, summary, time, mark, audio, video {
   to   { filter: blur(0px); }
 }
 
- #banner-section {
+#banner-section {
 
   width: 100vw;
   height: 100vh;
@@ -41,16 +40,6 @@ section, summary, time, mark, audio, video {
 .logo {
 
   max-width: 100%;
-  animation: blurin-intro 1s, spacing-intro 1.25s;
-}
-.logo:start {
-  max-width: 10%;
-}
-
-@media screen and (max-width: 1680px) {
-
-  html {
-    font-size: 11pt; } 
 
 }
 
@@ -70,25 +59,63 @@ section, summary, time, mark, audio, video {
 }
 
 .gameplay img {
+  
   width: 100%;
   max-width: 720px;
   position: relative; /* or absolute */
-  box-shadow: -5px 8px 50px 10px #555;
-  -webkit-transform: rotate(10deg);
-  -moz-transform: rotate(10deg);
-  -o-transform: rotate(10deg);
-  -ms-transform: rotate(10deg);
-  transform: rotate(-2deg);
+
 }
 
-.gameplay div {
+.shadow-smear {
+
+  box-shadow: -5px 8px 50px 10px #555;
+
+}
+
+.tilt-left {
+
+  transform: rotate(-2deg);
+
+}
+
+.tilt-right {
+
+  transform: rotate(2deg);
+
+}
+
+
+@media screen and (max-width: 1100px) {
+
+  .tilt-right {
+
+    transform: rotate(0deg);
+  
+  }
+
+  .tilt-left {
+
+    transform: rotate(0deg);
+  
+  }
+
+  .shadow-smear {
+
+    box-shadow: 0px 0px 0px 0px;
+  
+  }
+  
+
+}
+
+.description {
 
   text-align: left;
   width: 40%;
 
 }
 
-span {
+span > .space-1{
 
   width: 3%;
   height: 3%;
@@ -114,6 +141,8 @@ span {
   transform: rotate(-5deg) scale(1.2);
 }
 
+/* --- FLEX LAYOUT --- */
+
 .flex-center {
 
   display: flex;
@@ -134,33 +163,34 @@ span {
 
 }
 
- /* --- 99: DASE --- */
+ /* --- TEXT --- */
 
- h1 {
+h1 {
    text-align: left;
    font-size: 30px;
    font-weight: bold;
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h2 {
   text-align: left;
   font-size: 25px;
   font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 p {
   text-align: left;
   font-size: 20px;
   font-weight: none;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+ /* --- GENERAL --- */
+
 html body {
+  
   overflow: scroll;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+
 }
 ::-webkit-scrollbar {
   width: 0px; 
